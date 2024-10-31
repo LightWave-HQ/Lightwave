@@ -137,18 +137,18 @@ Functions</h2></td></tr>
 <tr class="memitem:aa866f46f1e2ee2be1bc82c26b8127d33" id="r_aa866f46f1e2ee2be1bc82c26b8127d33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa866f46f1e2ee2be1bc82c26b8127d33">updateWiFiCredentials</a> (const char *newSSID, const char *newPassword)</td></tr>
 <tr class="memdesc:aa866f46f1e2ee2be1bc82c26b8127d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the SSID and password fields in the LittleFS configuration file.  <br /></td></tr>
 <tr class="separator:aa866f46f1e2ee2be1bc82c26b8127d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68112deb44091850b1e7e023fc6c700b" id="r_a68112deb44091850b1e7e023fc6c700b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68112deb44091850b1e7e023fc6c700b">saveTimeSettings</a> (const char *onTime, const char *offTime)</td></tr>
-<tr class="memdesc:a68112deb44091850b1e7e023fc6c700b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the on and off time settings to the LittleFS configuration file.  <br /></td></tr>
-<tr class="separator:a68112deb44091850b1e7e023fc6c700b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615b46babc1c04ef19e226da4a1c10b7" id="r_a615b46babc1c04ef19e226da4a1c10b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a615b46babc1c04ef19e226da4a1c10b7">saveTimeSettings</a> (unsigned int onTime, unsigned int offTime)</td></tr>
+<tr class="memdesc:a615b46babc1c04ef19e226da4a1c10b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the on and off time settings to the LittleFS configuration file.  <br /></td></tr>
+<tr class="separator:a615b46babc1c04ef19e226da4a1c10b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd6a38427e26177900a6a421f8e17452" id="r_afd6a38427e26177900a6a421f8e17452"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd6a38427e26177900a6a421f8e17452">handleRTC</a> ()</td></tr>
 <tr class="memdesc:afd6a38427e26177900a6a421f8e17452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and configures the RTC for the device.  <br /></td></tr>
 <tr class="separator:afd6a38427e26177900a6a421f8e17452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a0c95e37cb7fd50a7cb8d3ae607c9b0" id="r_a9a0c95e37cb7fd50a7cb8d3ae607c9b0"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a0c95e37cb7fd50a7cb8d3ae607c9b0">stringToDateTime</a> (const char *timeString)</td></tr>
-<tr class="memdesc:a9a0c95e37cb7fd50a7cb8d3ae607c9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a time string in "hh:mm AM/PM" format (char*) to a DateTime object based on the current date from the RTC.  <br /></td></tr>
-<tr class="separator:a9a0c95e37cb7fd50a7cb8d3ae607c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1802ed1a3bc93e546b603ef68c9fa9f9" id="r_a1802ed1a3bc93e546b603ef68c9fa9f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1802ed1a3bc93e546b603ef68c9fa9f9">updateRTCFromNTP</a> ()</td></tr>
 <tr class="memdesc:a1802ed1a3bc93e546b603ef68c9fa9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the RTC time using the NTP server.  <br /></td></tr>
 <tr class="separator:a1802ed1a3bc93e546b603ef68c9fa9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff0831bdafcf179423ba9adaa1f5fad" id="r_a6ff0831bdafcf179423ba9adaa1f5fad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ff0831bdafcf179423ba9adaa1f5fad">blinkErrorLed</a> ()</td></tr>
+<tr class="memdesc:a6ff0831bdafcf179423ba9adaa1f5fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blinks an error LED to indicate a failure in both NTP and RTC.  <br /></td></tr>
+<tr class="separator:a6ff0831bdafcf179423ba9adaa1f5fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Function declarations for Wi-Fi handling, configuration, mDNS setup, RTC management, NTP synchronization, and web server management. </p>
@@ -158,6 +158,27 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2024-10-28 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>WittyWizard </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a6ff0831bdafcf179423ba9adaa1f5fad" name="a6ff0831bdafcf179423ba9adaa1f5fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff0831bdafcf179423ba9adaa1f5fad">&#9670;&#160;</a></span>blinkErrorLed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void blinkErrorLed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Blinks an error LED to indicate a failure in both NTP and RTC. </p>
+<p>This function continuously blinks an LED connected to <code>errorLedPin</code> with a 500 ms on/off interval. It is called when both NTP and RTC time synchronization fail, providing a visual indication of an error.</p>
+<dl class="section note"><dt>Note</dt><dd>This function runs in an infinite loop and halts further execution of the program. </dd></dl>
+
+</div>
+</div>
 <a id="a6ed49b94feabf003715944c59bed75f9" name="a6ed49b94feabf003715944c59bed75f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ed49b94feabf003715944c59bed75f9">&#9670;&#160;</a></span>handleAP()</h2>
 
@@ -340,8 +361,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a68112deb44091850b1e7e023fc6c700b" name="a68112deb44091850b1e7e023fc6c700b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68112deb44091850b1e7e023fc6c700b">&#9670;&#160;</a></span>saveTimeSettings()</h2>
+<a id="a615b46babc1c04ef19e226da4a1c10b7" name="a615b46babc1c04ef19e226da4a1c10b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615b46babc1c04ef19e226da4a1c10b7">&#9670;&#160;</a></span>saveTimeSettings()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,12 +370,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool saveTimeSettings </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>onTime</em></span>, </td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>onTime</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>offTime</em></span>&#160;)</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>offTime</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -363,39 +384,12 @@ Functions</h2></td></tr>
 <p>This function writes the provided "onTime" and "offTime" values to the LittleFS file system. It creates or updates a JSON file that stores the time settings. If the file cannot be opened or the settings cannot be saved, the function returns false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">onTime</td><td>The time when the light should be turned on (in string format, e.g., "08:00"). </td></tr>
-    <tr><td class="paramname">offTime</td><td>The time when the light should be turned off (in string format, e.g., "18:00"). </td></tr>
+    <tr><td class="paramname">onTime</td><td>The time when the light should be turned on (unix epoch time). </td></tr>
+    <tr><td class="paramname">offTime</td><td>The time when the light should be turned off (unix epoch time). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the time settings are successfully saved, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="a9a0c95e37cb7fd50a7cb8d3ae607c9b0" name="a9a0c95e37cb7fd50a7cb8d3ae607c9b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a0c95e37cb7fd50a7cb8d3ae607c9b0">&#9670;&#160;</a></span>stringToDateTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DateTime stringToDateTime </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>timeString</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a time string in "hh:mm AM/PM" format (char*) to a DateTime object based on the current date from the RTC. </p>
-<p>This function takes a time string in the format "hh:mm AM/PM" and converts it to a DateTime object using the current date obtained from the RTC. If the time string is invalid, the function returns a default DateTime object set to 2000-01-01 00:00:00.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timeString</td><td>The time string in the format "hh:mm AM/PM" as a char*. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>DateTime The DateTime object representing the parsed time, or a default DateTime (2000-01-01 00:00:00) if parsing fails. </dd></dl>
 
 </div>
 </div>
